@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="RepairsBill" table="ADM_REPAIRS_BILLS">
+    <id name="rbId" column="ADM_REPAIRS_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransClass" column="ADM_REPAIRS_TRANS_CLASS" length="15" />
+    <property name="TransId" column="ADM_REPAIRS_TRANS_ID" length="5" />
+
+    <property name="TransNo" column="ADM_REPAIRS_TRANS_NO" length="10" />
+    <property name="RepairsType" column="ADM_REPAIRS_TYPE" length="10" />
+    <property name="TransDate" column="ADM_REPAIRS_TRANS_DATE" type="datetime" />
+    <property name="BranchCode" column="ADM_REPAIRS_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_REPAIRS_DEPT_CODE" length="05" />
+    <property name="TransAmount" column="ADM_REPAIRS_TRANS_AMT" type="decimal" />
+    <property name="Description" column="ADM_REPAIRS_TRANS_DESC" length="150" />
+    <property name="ServiceCoy" column="ADM_REPAIRS_SERVICE_COY" length="5" />
+    <property name="ServiceHrs" column="ADM_REPAIRS_SERVICE_HRS" type="integer" />
+    <property name="EntryFlag" column="ADM_REPAIRS_ENTRY_FLAG" length="10" />
+    <property name="EntryDate" column="ADM_REPAIRS_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_REPAIRS_OPER_ID" length="6" />
+  </class>
+</hibernate-mapping>

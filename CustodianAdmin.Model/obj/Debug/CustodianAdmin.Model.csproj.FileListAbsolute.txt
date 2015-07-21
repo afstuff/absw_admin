@@ -1,0 +1,5 @@
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Model\bin\Debug\CustodianAdmin.Model.dll
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Model\bin\Debug\CustodianAdmin.Model.pdb
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Model\obj\Debug\ResolveAssemblyReference.cache
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Model\obj\Debug\CustodianAdmin.Model.dll
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Model\obj\Debug\CustodianAdmin.Model.pdb

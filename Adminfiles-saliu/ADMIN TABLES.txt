@@ -1,0 +1,219 @@
+BRANCH TABLE
+
+CREATE TABLE [ABSBRNCHTAB] (
+	[CTBRA_NO] [numeric](18, 0) NULL ,
+	[CTBRA_ID] [char] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_NUM] [char] (4) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_NAME] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_ADDR1] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_ADDR2] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_ADDR3] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_TEL1] [char] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_TEL2] [char] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_FAX1] [char] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_FAX2] [char] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_MANAGER] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTLOC_NUM] [char] (4) COLLATE Latin1_General_CI_AS NULL ,
+	[CTLOC_NAME] [char] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_FLAG] [char] (1) COLLATE Latin1_General_CI_AS NULL ,
+	[CTBRA_KEYDTE] [datetime] NULL ,
+	[CTBRA_OPERID] [char] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+DEPARTMENT TABLE
+
+CREATE TABLE [ABSPERCODE] (
+	[PER_TRANS_TYPE] [char] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_NUM] [char] (4) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_ID] [numeric](18, 0) NULL ,
+	[PER_TRANS_LONG_DESCR] [char] (50) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_SHORT_DESCR] [char] (20) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_BLOOD_GROUP] [char] (2) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_BLOOD_RHESUS] [char] (1) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_BLOOD_GENOTYPE] [char] (2) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_FLAG] [char] (1) COLLATE Latin1_General_CI_AS NULL ,
+	[PER_TRANS_KEYDTE] [datetime] NULL ,
+	[PER_TRANS_OPERID] [char] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CODES TABLE
+CREATE TABLE [ADM_MAINT_CODE_TABLE] (
+	[ADM_TAB_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_TAB_CLASS_CODE_NO] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_CODE_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_DESC] [nvarchar] (100) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_TYPE] [nvarchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_BRANCH] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_DEPT] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_FLAG] [nvarchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TAB_ITEM_DATE] [datetime] NULL ,
+	[ADM_TAB_ITEM_OPER_ID] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+
+
+
+DIESEL TABLE
+
+
+CREATE TABLE [ADM_DIESEL_BILLS] (
+	[ADM_DIESEL_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_DIESEL_TRANS_TYPE] [nvarchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_TRANS_NO] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_TRANS_DATE] [datetime] NULL ,
+	[ADM_DIESEL_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_TRANS_QTY] [decimal](19, 5) NULL ,
+	[ADM_DIESEL_TRANS_UNIT_PRICE] [decimal](9, 5) NULL ,
+	[ADM_DIESEL_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_DIESEL_SUPPLY_COY_CD] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DIESEL_ENTRY_DATE] [datetime] NULL ,
+	[ADM_DIESEL_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+ELECTRICITY TABLE
+CREATE TABLE [ADM_ELECTRIC_BILLS] (
+	[ADM_ELEC_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_ELEC_METER_NO] [nvarchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_ACCOUNT_NO] [nvarchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_TRANS_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_TRANS_DATE] [datetime] NULL ,
+	[ADM_ELEC_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_ELEC_PERIOD_PAID_FOR] [nvarchar] (50) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ELEC_ENTRY_DATE] [datetime] NULL ,
+	[ADM_ELEC_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+
+CLAIMS TABLE
+
+CREATE TABLE [ADM_INSURANCE_CLAIM_BILLS] (
+	[ADM_INS_CLAIM_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_INS_CLAIM_COVER_TYPE] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_TRANS_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_TRANS_DATE] [datetime] NULL ,
+	[ADM_INS_CLAIM_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_POLICY_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_BROKER_CODE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_INSURER_CODE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_DESC] [nvarchar] (100) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_LOSS_DATE] [datetime] NULL ,
+	[ADM_INS_CLAIM_REQUESTED] [decimal](19, 5) NULL ,
+	[ADM_INS_CLAIM_PAID] [decimal](19, 5) NULL ,
+	[ADM_INS_CLAIM_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_CLAIM_ENTRY_DATE] [datetime] NULL ,
+	[ADM_INS_CLAIM_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+PREMIUM TABLE
+
+CREATE TABLE [ADM_INSURANCE_PREM_BILLS] (
+	[ADM_INS_PREM_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_INS_PREM_COVER_TYPE] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_TRANS_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_TRANS_DATE] [datetime] NULL ,
+	[ADM_INS_PREM_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_POLICY_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_BROKER_CODE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_INSURER_CODE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_DESC] [nvarchar] (100) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_START_DATE] [datetime] NULL ,
+	[ADM_INS_PREM_END_DATE] [datetime] NULL ,
+	[ADM_INS_PREM_SUM_INSURED] [decimal](19, 5) NULL ,
+	[ADM_INS_PREM_PREMIUM_AMT] [decimal](19, 5) NULL ,
+	[ADM_INS_PREM_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_INS_PREM_ENTRY_DATE] [datetime] NULL ,
+	[ADM_INS_PREM_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+OUTSOURCING TABLE
+
+CREATE TABLE [ADM_OUTSOURCE_BILLS] (
+	[ADM_OUTSOURCE_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_OUTSOURCE_TRANS_TYPE] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_TRANS_NO] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_TRANS_DATE] [datetime] NULL ,
+	[ADM_OUTSOURCE_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_NO_OF_STAFF] [int] NULL ,
+	[ADM_OUTSOURCE_DESC] [nvarchar] (100) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_OUTSOURCE_SUPPLY_COY_CD] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_OUTSOURCE_ENTRY_DATE] [datetime] NULL ,
+	[ADM_OUTSOURCE_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+REPAIRS TABLE
+CREATE TABLE [ADM_REPAIRS_BILLS] (
+	[ADM_REPAIRS_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_REPAIRS_TYPE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_TRANS_NO] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_TRANS_DATE] [datetime] NULL ,
+	[ADM_REPAIRS_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_REPAIRS_TRANS_DESC] [nvarchar] (150) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_SERVICE_COY_CD] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_SERVICE_HRS] [int] NULL ,
+	[ADM_REPAIRS_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_REPAIRS_ENTRY_DATE] [datetime] NULL ,
+	[ADM_REPAIRS_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+TELEPHONE TABLE
+CREATE TABLE [ADM_TELEPHONE_BILLS] (
+	[ADM_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_TELEPHONE_NO] [nvarchar] (22) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TRANS_NO] [nvarchar] (15) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TRANS_DATE] [datetime] NULL ,
+	[ADM_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_TRANS_DESC] [nvarchar] (250) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_USER_NAME] [nvarchar] (50) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ENTRY_FLAG] [nvarchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_ENTRY_DATE] [datetime] NULL ,
+	[ADM_OPER_ID] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+
+VEHICLE TABLES
+CREATE TABLE [ADM_VEH_MAINT_BILLS] (
+	[ADM_VEH_MAINT_BILL_REC_ID] [int] IDENTITY (1, 1) NOT NULL ,
+	[ADM_VEH_MAINT_VEH_NO] [nvarchar] (12) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_VEH_TYPE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_TRANS_NO] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_TRANS_DATE] [datetime] NULL ,
+	[ADM_VEH_MAINT_TRANS_TYPE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_USER_NAME_CODE] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_BRANCH_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_DEPT_CODE] [nvarchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_TRANS_AMT] [decimal](19, 5) NULL ,
+	[ADM_VEH_MAINT_TRANS_DESC] [nvarchar] (150) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_SERVICE_COY_CD] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_ENTRY_FLAG] [nvarchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[ADM_VEH_MAINT_ENTRY_DATE] [datetime] NULL ,
+	[ADM_VEH_MAINT_OPER_ID] [nvarchar] (6) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+
+

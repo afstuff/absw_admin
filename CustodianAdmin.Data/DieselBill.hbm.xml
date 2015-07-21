@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="DieselBill" table="ADM_DIESEL_BILLS">
+    <id name="dbId" column="ADM_DIESEL_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransClass" column="ADM_DIESEL_TRANS_CLASS" length="15" />
+    <property name="TransId" column="ADM_DIESEL_TRANS_ID" length="5" />
+    <property name="TransNo" column="ADM_DIESEL_TRANS_NO" length="15" />
+    <property name="TransactionType" column="ADM_DIESEL_TRANS_TYPE" length="3" />
+    <property name="TransDate" column="ADM_DIESEL_TRANS_DATE" type="datetime" />
+    <property name="BranchCode" column="ADM_DIESEL_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_DIESEL_DEPT_CODE" length="05" />
+    <property name="Quantity" column="ADM_DIESEL_TRANS_QTY" type="decimal" />
+    <property name="UnitPrice" column="ADM_DIESEL_TRANS_UNIT_PRICE" type="decimal" />
+    <property name="TransAmount" column="ADM_DIESEL_TRANS_AMT" type="decimal" />
+    <property name="SupplyCompany" column="ADM_DIESEL_SUPPLY_COY" length="50" />
+    <property name="TransDescription" column="ADM_DIESEL_TRANS_DESC" length="150" />
+    <property name="EntryFlag" column="ADM_DIESEL_ENTRY_FLAG" length="10" />
+    <property name="EntryDate" column="ADM_DIESEL_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_DIESEL_OPER_ID" length="6" />
+  </class>
+</hibernate-mapping>
+
+

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="OutsourceBill" table="ADM_OUTSOURCE_BILLS">
+    <id name="obId" column="ADM_OUTSOURCE_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransClass" column="ADM_OUTSOURCE_TRANS_CLASS" length="15" />
+    <property name="TransId" column="ADM_OUTSOURCE_TRANS_ID" length="5" />
+    <property name="TransNo" column="ADM_OUTSOURCE_TRANS_NO" length="15" />
+    <property name="TransactionType" column="ADM_OUTSOURCE_TRANS_TYPE" length="3" />
+    <property name="TransDate" column="ADM_OUTSOURCE_TRANS_DATE" type="datetime" />
+    <property name="BranchCode" column="ADM_OUTSOURCE_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_OUTSOURCE_DEPT_CODE" length="05" />
+    <property name="NoOfStaff" column="ADM_OUTSOURCE_NO_OF_STAFF" type="decimal" />
+    <property name="TransDescription" column="ADM_OUTSOURCE_DESC" length="100" />
+    <property name="TransAmount" column="ADM_OUTSOURCE_TRANS_AMT" type="decimal" />
+    <property name="SupplyCompany" column="ADM_OUTSOURCE_SUPPLY_COY" length="50" />
+    <property name="EntryFlag" column="ADM_OUTSOURCE_ENTRY_FLAG" length="10" />
+    <property name="EntryDate" column="ADM_OUTSOURCE_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_OUTSOURCE_OPER_ID" length="6" />
+  </class>
+</hibernate-mapping>
+
+
+

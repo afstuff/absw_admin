@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24B1EFB6-8EC0-4235-AB28-485544D6BA16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ABSW_ADMIN</RootNamespace>
+    <AssemblyName>ABSW_ADMIN</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ABSW_ADMIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ABSW_ADMIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.Web\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AD110.aspx" />
+    <Content Include="AD120.aspx" />
+    <Content Include="AD130.aspx" />
+    <Content Include="AD140.aspx" />
+    <Content Include="AD150.aspx" />
+    <Content Include="AD160.aspx" />
+    <Content Include="AD170.aspx" />
+    <Content Include="ADLOGIN.aspx" />
+    <Content Include="AdminFRX.aspx" />
+    <Content Include="AdminMnu.aspx" />
+    <Content Include="ADOTH.aspx" />
+    <Content Include="ADRPT.aspx" />
+    <Content Include="AD_HOME.aspx" />
+    <Content Include="AD_MENU.aspx" />
+    <Content Include="Blankpg.aspx" />
+    <Content Include="Controls\UC_Footer.ascx" />
+    <Content Include="Controls\UC_Top.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Footerpg.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HOME_PG.aspx" />
+    <Content Include="Images\AU-wp4.jpg" />
+    <Content Include="Images\backblue.gif" />
+    <Content Include="Images\ballred.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\BgColor1.jpg" />
+    <Content Include="Images\BgColor2.jpg" />
+    <Content Include="Images\caibanner.jpg" />
+    <Content Include="Images\CAILogoN.jpg" />
+    <Content Include="Images\Discussion.jpg" />
+    <Content Include="Images\first_page.gif" />
+    <Content Include="Images\GB-wp6.jpg" />
+    <Content Include="Images\gif_6.gif" />
+    <Content Include="Images\HappyCustomerServiceOperator.jpg" />
+    <Content Include="Images\insurance1.jpg" />
+    <Content Include="Images\last_page.gif" />
+    <Content Include="Images\next_page.gif" />
+    <Content Include="Images\paper_teal.jpg" />
+    <Content Include="Images\prev_page.gif" />
+    <Content Include="Images\PRINT.BMP" />
+    <Content Include="Images\sp3.jpg" />
+    <Content Include="Images\WATRMRK2.gif" />
+    <Content Include="img\asc.gif" />
+    <Content Include="img\bl.gif" />
+    <Content Include="img\bm.gif" />
+    <Content Include="img\body-bg.gif" />
+    <Content Include="img\br.gif" />
+    <Content Include="img\bullet.gif" />
+    <Content Include="img\cal.gif" />
+    <Content Include="img\desc.gif" />
+    <Content Include="img\EonLogo.jpg" />
+    <Content Include="img\EonLogo.png" />
+    <Content Include="img\greenArrow.png" />
+    <Content Include="img\l.gif" />
+    <Content Include="img\login_key.jpg" />
+    <Content Include="img\next.gif" />
+    <Content Include="img\next_mon.gif" />
+    <Content Include="img\next_year.gif" />
+    <Content Include="img\no_cal.gif" />
+    <Content Include="img\pixel.gif" />
+    <Content Include="img\prev.gif" />
+    <Content Include="img\prev_mon.gif" />
+    <Content Include="img\prev_year.gif" />
+    <Content Include="img\r.gif" />
+    <Content Include="img\redArrow.png" />
+    <Content Include="img\shade_bl.png" />
+    <Content Include="img\shade_bm.png" />
+    <Content Include="img\shade_br.png" />
+    <Content Include="img\shade_mr.png" />
+    <Content Include="img\shade_tr.png" />
+    <Content Include="img\tl.gif" />
+    <Content Include="img\tm.gif" />
+    <Content Include="img\tr.gif" />
+    <Content Include="Script\ScriptVB.vbs" />
+    <Content Include="Script\ScriptJS.js" />
+    <Content Include="StyleAdmin.css" />
+    <Content Include="UC_BAN3.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Welcome.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AD110.aspx.designer.vb">
+      <DependentUpon>AD110.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD110.aspx.vb">
+      <DependentUpon>AD110.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD111.aspx.designer.vb">
+      <DependentUpon>AD111.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD111.aspx.vb">
+      <DependentUpon>AD111.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD112.aspx.designer.vb">
+      <DependentUpon>AD112.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD112.aspx.vb">
+      <DependentUpon>AD112.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD120.aspx.designer.vb">
+      <DependentUpon>AD120.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD120.aspx.vb">
+      <DependentUpon>AD120.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD122.aspx.designer.vb">
+      <DependentUpon>AD122.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD122.aspx.vb">
+      <DependentUpon>AD122.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD130.aspx.designer.vb">
+      <DependentUpon>AD130.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD130.aspx.vb">
+      <DependentUpon>AD130.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD132.aspx.designer.vb">
+      <DependentUpon>AD132.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD132.aspx.vb">
+      <DependentUpon>AD132.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD140.aspx.designer.vb">
+      <DependentUpon>AD140.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD140.aspx.vb">
+      <DependentUpon>AD140.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD142.aspx.designer.vb">
+      <DependentUpon>AD142.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD142.aspx.vb">
+      <DependentUpon>AD142.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD150.aspx.designer.vb">
+      <DependentUpon>AD150.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD150.aspx.vb">
+      <DependentUpon>AD150.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD160.aspx.designer.vb">
+      <DependentUpon>AD160.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD160.aspx.vb">
+      <DependentUpon>AD160.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD170.aspx.designer.vb">
+      <DependentUpon>AD170.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD170.aspx.vb">
+      <DependentUpon>AD170.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD180.aspx.designer.vb">
+      <DependentUpon>AD180.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD180.aspx.vb">
+      <DependentUpon>AD180.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ADLOGIN.aspx.designer.vb">
+      <DependentUpon>ADLOGIN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADLOGIN.aspx.vb">
+      <DependentUpon>ADLOGIN.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminFRX.aspx.designer.vb">
+      <DependentUpon>AdminFRX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFRX.aspx.vb">
+      <DependentUpon>AdminFRX.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminMnu.aspx.designer.vb">
+      <DependentUpon>AdminMnu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMnu.aspx.vb">
+      <DependentUpon>AdminMnu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ADOTH.aspx.designer.vb">
+      <DependentUpon>ADOTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADOTH.aspx.vb">
+      <DependentUpon>ADOTH.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ADRPT.aspx.designer.vb">
+      <DependentUpon>ADRPT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADRPT.aspx.vb">
+      <DependentUpon>ADRPT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD_HOME.aspx.designer.vb">
+      <DependentUpon>AD_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD_HOME.aspx.vb">
+      <DependentUpon>AD_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AD_MENU.aspx.designer.vb">
+      <DependentUpon>AD_MENU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD_MENU.aspx.vb">
+      <DependentUpon>AD_MENU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Blankpg.aspx.designer.vb">
+      <DependentUpon>Blankpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blankpg.aspx.vb">
+      <DependentUpon>Blankpg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Footer.ascx.designer.vb">
+      <DependentUpon>UC_Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Footer.ascx.vb">
+      <DependentUpon>UC_Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Top.ascx.designer.vb">
+      <DependentUpon>UC_Top.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Top.ascx.vb">
+      <DependentUpon>UC_Top.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footerpg.aspx.designer.vb">
+      <DependentUpon>Footerpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footerpg.aspx.vb">
+      <DependentUpon>Footerpg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HOME_PG.aspx.designer.vb">
+      <DependentUpon>HOME_PG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME_PG.aspx.vb">
+      <DependentUpon>HOME_PG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SiteGlobal.vb" />
+    <Compile Include="UC_BAN3.ascx.designer.vb">
+      <DependentUpon>UC_BAN3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BAN3.ascx.vb">
+      <DependentUpon>UC_BAN3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome.aspx.designer.vb">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.aspx.vb">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AD111.aspx" />
+    <Content Include="AD112.aspx" />
+    <Content Include="AD122.aspx" />
+    <Content Include="AD132.aspx" />
+    <Content Include="AD142.aspx" />
+    <Content Include="AD180.aspx" />
+    <Content Include="calendar.css" />
+    <Content Include="calendar_eu.js" />
+    <Content Include="img\image files.zip" />
+    <Content Include="jquery-1.11.0.js" />
+    <Content Include="jquery.simplemodal.js" />
+    <None Include="Web.config_dev" />
+    <None Include="Web.config_Prod" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VS2008 version\CustodianAdmin.Data\CustodianAdmin.Data.csproj">
+      <Project>{91B961E1-B651-434F-98DE-D407815A6D65}</Project>
+      <Name>CustodianAdmin.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VS2008 version\CustodianAdmin.Model\CustodianAdmin.Model.csproj">
+      <Project>{61D1E335-35D9-48C6-96E3-73707F9878D0}</Project>
+      <Name>CustodianAdmin.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VS2008 version\CustodianAdmin.Repositories\CustodianAdmin.Repositories.csproj">
+      <Project>{304DDEBA-2F9C-4693-B416-AA29BDFA7192}</Project>
+      <Name>CustodianAdmin.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3364</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="TelephoneBill" table="ADM_TELEPHONE_BILLS">
+    <id name="tbId" column="ADM_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransClass" column="ADM_TRANS_CLASS" length="15" />
+    <property name="TransId" column="ADM_TRANS_ID" length="5" />
+    <property name="TelephoneNo" column="ADM_TELEPHONE_NO" length="22" />
+    <property name="TransDate" column="ADM_TRANS_DATE" type="datetime" />
+    <property name="BranchCode" column="ADM_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_DEPT_CODE" length="05" />
+    <property name="TransAmount" column="ADM_TRANS_AMT" type="decimal" />
+    <property name="UserName" column="ADM_USER_NAME" length="100" />
+    <property name="Description" column="ADM_TRANS_DESC" length="250" />
+    <property name="EntryFlag" column="ADM_ENTRY_FLAG" length="003" />
+    <property name="EntryDate" column="ADM_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_OPER_ID" length="5" />
+  </class>
+</hibernate-mapping>

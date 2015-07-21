@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="InsuranceClaim" table="ADM_INSURANCE_CLAIM_BILLS">
+    <id name="cbId" column="ADM_INS_CLAIM_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransNo" column="ADM_INS_CLAIM_TRANS_NO" length="15" />
+    <property name="TransactionType" column="ADM_INS_CLAIM_COVER_TYPE" length="15" />
+    <property name="TransDate" column="ADM_INS_CLAIM_TRANS_DATE" type="datetime" />
+    <property name="BranchCode" column="ADM_INS_CLAIM_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_INS_CLAIM_DEPT_CODE" length="05" />
+    <property name="PolicyNo" column="ADM_INS_CLAIM_POLICY_NO" length="15" />
+    <property name="ClaimNo" column="ADM_INS_CLAIM_NO" length="15" />
+    <property name="BrokerName" column="ADM_INS_CLAIM_BROKER_CODE" length="10" />
+    <property name="InsurerName" column="ADM_INS_CLAIM_INSURER_CODE" length="10" />
+    <property name="TransDescription" column="ADM_INS_CLAIM_DESC" length="150" />
+    <property name="LossDate" column="ADM_INS_CLAIM_LOSS_DATE" type="datetime" />
+    <property name="ClaimRequested" column="ADM_INS_CLAIM_REQUESTED" type="decimal" />
+    <property name="ClaimPaid" column="ADM_INS_CLAIM_PAID" type="decimal" />
+    <property name="EntryFlag" column="ADM_INS_CLAIM_ENTRY_FLAG" length="10" />
+    <property name="EntryDate" column="ADM_INS_CLAIM_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_INS_CLAIM_OPER_ID" length="6" />
+  </class>
+</hibernate-mapping>

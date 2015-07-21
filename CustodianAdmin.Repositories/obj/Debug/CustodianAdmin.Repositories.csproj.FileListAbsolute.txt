@@ -1,0 +1,7 @@
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\bin\Debug\CustodianAdmin.Repositories.dll
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\bin\Debug\CustodianAdmin.Repositories.pdb
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\bin\Debug\CustodianAdmin.Model.dll
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\bin\Debug\CustodianAdmin.Model.pdb
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\obj\Debug\ResolveAssemblyReference.cache
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\obj\Debug\CustodianAdmin.Repositories.dll
+C:\james stuff\myC\WEBAPPS\PRODUCTION\CSHARP\VS2008 version\CustodianAdmin.Repositories\obj\Debug\CustodianAdmin.Repositories.pdb

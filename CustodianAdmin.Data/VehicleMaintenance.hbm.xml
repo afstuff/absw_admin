@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CustodianAdmin.Model" namespace="CustodianAdmin.Model">
+  <class name="VehicleMaintenance" table="ADM_VEH_MAINT_BILLS">
+    <id name="vmId" column="ADM_VEH_MAINT_BILL_REC_ID"  >
+      <generator class="identity"/>
+    </id>
+    <property name="TransClass" column="ADM_VEH_MAINT_TRANS_CLASS" length="15" />
+    <property name="TransId" column="ADM_VEH_MAINT_TRANS_ID" length="5" />
+    <property name="VehicleNo" column="ADM_VEH_MAINT_VEH_NO" length="12" />
+    <property name="VehicleType" column="ADM_VEH_MAINT_VEH_TYPE" length="50" />
+    <property name="TransDate" column="ADM_VEH_MAINT_TRANS_DATE" type="datetime" />
+    <property name="MaintenanceType" column="ADM_VEH_MAINT_TRANS_TYPE" length="50" />
+    <property name="UserName" column="ADM_VEH_MAINT_USER_NAME" length="30" />
+    <property name="BranchCode" column="ADM_VEH_MAINT_BRANCH_CODE" length="05" />
+    <property name="Department" column="ADM_VEH_MAINT_DEPT_CODE" length="05" />
+    <property name="TransAmount" column="ADM_VEH_MAINT_TRANS_AMT" type="decimal" />
+    <property name="Description" column="ADM_VEH_MAINT_TRANS_DESC" length="150" />
+    <property name="ServiceCompany" column="ADM_VEH_MAINT_SERVICE_COY" length="50" />
+    <property name="EntryFlag" column="ADM_VEH_MAINT_ENTRY_FLAG" length="003" />
+    <property name="EntryDate" column="ADM_VEH_MAINT_ENTRY_DATE" type="datetime" />
+    <property name="OperatorId" column="ADM_VEH_MAINT_OPER_ID" length="5" />
+  </class>
+</hibernate-mapping>
