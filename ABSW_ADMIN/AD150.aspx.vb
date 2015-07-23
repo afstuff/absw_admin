@@ -42,6 +42,10 @@ Partial Public Class AD150
             SetComboBinding(ddlBraNum, acRepo.GetAdminCodes("009"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlDeptNum, acRepo.GetAdminCodes("008"), "ItemDesc", "ItemCode")
 
+            SetComboBinding(ddlTransClass, acRepo.GetAdminCodes("010"), "ItemDesc", "ItemCode")
+            SetComboBinding(ddlTransID, acRepo.GetAdminCodes("011"), "ItemDesc", "ItemCode")
+
+
             If strKey IsNot Nothing Then
                 FillValues()
             Else
@@ -103,6 +107,8 @@ Partial Public Class AD150
             'lblError.Visible = False
             txtTransNum.Text = acRepo.GetNextSerialNumber("L01", "004", "01", Date.Now.Year.ToString(), "", "01", "01")
 
+            dbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            dbill.TransId = ddlTransID.SelectedValue.ToString()
             dbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             dbill.Department = ddlDeptNum.SelectedValue.ToString()
             dbill.TransDescription = txtTransDescr.Text
@@ -126,6 +132,9 @@ Partial Public Class AD150
             dbRepo = CType(Session("dbRepo"), DieselBillRepository)
             dbill = CType(Session("dbill"), DieselBill)
 
+
+            dbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            dbill.TransId = ddlTransID.SelectedValue.ToString()
             dbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             dbill.Department = ddlDeptNum.SelectedValue.ToString()
             dbill.TransDescription = txtTransDescr.Text
@@ -162,6 +171,8 @@ Partial Public Class AD150
         txtTransRate.Text = String.Empty
         cmbTransType.SelectedIndex = 0
         cmbServiceComp.SelectedIndex = 0
+        ddlTransClass.SelectedIndex = 0
+        ddlTransID.SelectedIndex = 0
 
 
     End Sub
@@ -170,6 +181,7 @@ Partial Public Class AD150
         toBind.DataValueField = valueMember
         toBind.DataSource = dataSource
         toBind.DataBind()
+        toBind.Items.Insert(0, New ListItem("Select", "NA"))
     End Sub
 
     Private Sub FillValues()
@@ -186,6 +198,8 @@ Partial Public Class AD150
 
                 ddlBraNum.SelectedValue = dbill.BranchCode
                 ddlDeptNum.SelectedValue = dbill.Department
+                ddlTransClass.SelectedValue = dbill.TransClass
+                ddlTransID.SelectedValue = dbill.TransId
                 txtTransNum.Text = dbill.TransNo
                 txtTransAmt1.Text = Math.Round(.TransAmount, 2)
                 txtTransRate.Text = Math.Round(.UnitPrice, 2)
@@ -289,6 +303,11 @@ Partial Public Class AD150
 
     Private Sub cmbServiceComp_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbServiceComp.SelectedIndexChanged
         DoProc_Company_Change()
+    End Sub
+
+    Protected Sub ddlTransClass_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlTransClass.SelectedIndexChanged
+        SetComboBinding(ddlTransID, acRepo.GetAdminOtherCodes("011", ddlTransClass.SelectedValue), "ItemDesc", "ItemCode")
+
     End Sub
 
 End Class

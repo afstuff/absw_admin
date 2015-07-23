@@ -33,7 +33,7 @@
                         $('#type1').show();
                         $('#BranchRow').show();
                         $('#DeptRow').show();
-                        LoadMotorTypes();
+                       // LoadMotorTypes();
                         $('#TransClassRow').hide();
                         break;
                     case "002": //supplier
@@ -117,6 +117,15 @@
                         $('#type1').hide();
                         $('#BranchRow').hide();
                         $('#DeptRow').hide();
+                        break;
+                    case "012": //Vehicle Types
+                        $('#lblItemCode').text('Type ID');
+                        $('#lblItemDesc').text('Type Name');
+
+                        $('#type1').hide();
+                        $('#BranchRow').hide();
+                        $('#DeptRow').hide();
+                        $('#TransClassRow').hide();
                         break;
                     default:
                         $('#BranchRow').show();
@@ -250,6 +259,7 @@
                             <asp:ListItem Text="Branch" Value="009"></asp:ListItem>
                             <asp:ListItem Text="Trans Class" Value="010"></asp:ListItem>
                             <asp:ListItem Text="Trans IDs" Value="011"></asp:ListItem>
+                            <asp:ListItem Text="Vehicle Type" Value="012"></asp:ListItem>
                         </asp:DropDownList><asp:TextBox ID="txtCodeClass" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>

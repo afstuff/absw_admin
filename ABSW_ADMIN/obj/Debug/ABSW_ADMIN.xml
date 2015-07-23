@@ -2062,6 +2062,14 @@ ods control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:ABSW_ADMIN.AD140.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:ABSW_ADMIN.AD140.Form1">
 	<summary>
 Form1 control.
@@ -2145,6 +2153,70 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.AD140.lblMessage">
 	<summary>
 lblMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.ddlTransClass">
+	<summary>
+ddlTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.txtClassID">
+	<summary>
+txtClassID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.txtClassName">
+	<summary>
+txtClassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.ddlTransID">
+	<summary>
+ddlTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.txtTransID">
+	<summary>
+txtTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD140.txtTransName">
+	<summary>
+txtTransName control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -2334,14 +2406,6 @@ ddlServiceComp control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:ABSW_ADMIN.AD140.grdData">
-	<summary>
-grdData control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
 </member><member name="F:ABSW_ADMIN.AD140.Label2">
 	<summary>
 Label2 control.
@@ -2374,9 +2438,25 @@ cmdDelItem control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:ABSW_ADMIN.AD140.grdData">
+	<summary>
+grdData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:ABSW_ADMIN.AD140.ods">
 	<summary>
 ods control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.Head1">
+	<summary>
+Head1 control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -2465,6 +2545,70 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.AD150.lblMessage">
 	<summary>
 lblMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.ddlTransClass">
+	<summary>
+ddlTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.txtClassID">
+	<summary>
+txtClassID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.txtClassName">
+	<summary>
+txtClassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.ddlTransID">
+	<summary>
+ddlTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.txtTransID">
+	<summary>
+txtTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD150.txtTransName">
+	<summary>
+txtTransName control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -2806,6 +2950,14 @@ CancelBtn control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:ABSW_ADMIN.AD160.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:ABSW_ADMIN.AD160.Form1">
 	<summary>
 Form1 control.
@@ -2889,6 +3041,70 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.AD160.lblMessage">
 	<summary>
 lblMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.ddlTransClass">
+	<summary>
+ddlTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.txtClassID">
+	<summary>
+txtClassID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.txtClassName">
+	<summary>
+txtClassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.ddlTransID">
+	<summary>
+ddlTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.txtTransID">
+	<summary>
+txtTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD160.txtTransName">
+	<summary>
+txtTransName control.
 </summary>
 	<remarks>
 Auto-generated field.

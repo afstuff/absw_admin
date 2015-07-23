@@ -177,6 +177,7 @@ Partial Public Class AD180
         toBind.DataValueField = valueMember
         toBind.DataSource = dataSource
         toBind.DataBind()
+        toBind.Items.Insert(0, New ListItem("Select", "NA"))
     End Sub
 
     Private Sub FillValues()

@@ -64,8 +64,10 @@ End Sub
     <script type="text/javascript">
         // calling jquery functions once document is ready
         $(document).ready(function() {
-        $("#MainTypeRow").css("display", "none");
-        $("#veh_type_row").css("display", "none");
+            $("#MainTypeRow").css("display", "none");
+            $("#veh_type_row").css("display", "none");
+            $("#service_coy_line").css("display", "none");
+        
         
             $("#cmbVehicle").css("left", "-9999em");
 
@@ -254,7 +256,7 @@ End Sub
                         <td align="right" valign="top"><asp:Label ID="lblTransDescr" Text="Description:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtTransDescr" MaxLength="150" runat="server" Width="400px"></asp:TextBox>&nbsp;</td>
                     </tr>
-                    <tr>
+                    <tr id="service_coy_line">
                         <td align="right" valign="top" ><asp:Label ID="lblServiceComp" Text="Service Company:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="bottom"><asp:TextBox ID="txtServiceComp"  Width="150"  runat="server" MaxLength=15 ></asp:TextBox>
                                            &nbsp;Find:<asp:TextBox ID="txtServiceComp_Search" Width="120px" runat="server"></asp:TextBox>

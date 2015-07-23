@@ -42,6 +42,8 @@ Partial Public Class AD111
             SetComboBinding(ddlBraNum, acRepo.GetAdminCodes("009"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlDeptNum, acRepo.GetAdminCodes("008"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlTransClass, acRepo.GetAdminCodes("010"), "ItemDesc", "ItemCode")
+            SetComboBinding(cmbCodeType, acRepo.GetAdminCodes("012"), "ItemDesc", "ItemCode")
+
             'SetComboBinding(cmbCodeType, acRepo.GetCarMakes(), "Type", "mId")
 
             If strKey IsNot Nothing Then

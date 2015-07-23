@@ -22,7 +22,7 @@ Partial Public Class AD140
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'SessionProvider.RebuildSchema()
-        ddlBraNum.Attributes.Add("disabled", "disabled")
+        'ddlBraNum.Attributes.Add("disabled", "disabled")
         ddlDeptNum.Attributes.Add("disabled", "disabled")
         txtTransNum.Attributes.Add("disabled", "disabled")
 
@@ -41,10 +41,14 @@ Partial Public Class AD140
             Session("strKey") = strKey
 
             SetComboBinding(ddlServiceComp, rbRepo.GetAdminCodes("002"), "ItemDesc", "ItemCode")
-            SetComboBinding(ddlTransType, rbRepo.GetAdminCodes("003"), "ItemDesc", "ItemCode")
+            'SetComboBinding(ddlTransType, rbRepo.GetAdminCodes("003"), "ItemDesc", "ItemCode")
 
             SetComboBinding(ddlBraNum, acRepo.GetAdminCodes("009"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlDeptNum, acRepo.GetAdminCodes("008"), "ItemDesc", "ItemCode")
+
+            SetComboBinding(ddlTransClass, acRepo.GetAdminCodes("010"), "ItemDesc", "ItemCode")
+            SetComboBinding(ddlTransID, acRepo.GetAdminCodes("011"), "ItemDesc", "ItemCode")
+
 
             If strKey IsNot Nothing Then
                 FillValues()
@@ -102,6 +106,9 @@ Partial Public Class AD140
             txtTransNum.Text = rbRepo.GetNextSerialNumber("L01", "002", "01", Date.Now.Year.ToString(), "", "01", "01")
 
             'lblError.Visible = False
+            rbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            rbill.TransId = ddlTransID.SelectedValue.ToString()
+
             rbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             rbill.Department = ddlDeptNum.SelectedValue.ToString()
             rbill.Description = txtTransDescr.Text
@@ -112,7 +119,7 @@ Partial Public Class AD140
             rbill.TransDate = ValidDate(txtTransDate.Text)
             rbill.TransAmount = Math.Round(CType(txtTransAmt.Text, Decimal), 2)
             rbill.ServiceCoy = txtServiceComp.Text.Trim
-            rbill.ServiceHrs = CType(txtServiceHrs.Text, Integer)
+            rbill.ServiceHrs = 0 'CType(txtServiceHrs.Text, Integer)
 
             rbRepo.Save(rbill)
             Session("rbill") = rbill
@@ -120,13 +127,16 @@ Partial Public Class AD140
             rbRepo = CType(Session("rbRepo"), RepairsBillRepository)
             rbill = CType(Session("rbill"), RepairsBill)
 
+            rbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            rbill.TransId = ddlTransID.SelectedValue.ToString()
+
             rbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             rbill.Department = ddlDeptNum.SelectedValue.ToString()
             rbill.Description = txtTransDescr.Text
             rbill.TransDate = ValidDate(txtTransDate.Text)
             rbill.TransAmount = Math.Round(CType(txtTransAmt.Text, Decimal), 2)
             rbill.ServiceCoy = txtServiceComp.Text.Trim
-            rbill.ServiceHrs = CType(txtServiceHrs.Text, Integer)
+            rbill.ServiceHrs = 0 ' CType(txtServiceHrs.Text, Integer)
 
             rbRepo.Save(rbill)
 
@@ -150,6 +160,8 @@ Partial Public Class AD140
         ddlDeptNum.SelectedIndex = 0
         ddlServiceComp.SelectedIndex = 0
         txtServiceHrs.Text = String.Empty
+        ddlTransClass.SelectedIndex = 0
+        ddlTransID.SelectedIndex = 0
 
     End Sub
     Private Sub SetComboBinding(ByVal toBind As ListControl, ByVal dataSource As Object, ByVal displayMember As String, ByVal valueMember As String)
@@ -157,6 +169,8 @@ Partial Public Class AD140
         toBind.DataValueField = valueMember
         toBind.DataSource = dataSource
         toBind.DataBind()
+        toBind.Items.Insert(0, New ListItem("Select", "NA"))
+
     End Sub
 
     Private Sub FillValues()
@@ -174,6 +188,8 @@ Partial Public Class AD140
                 ddlBraNum.SelectedValue = rbill.BranchCode
                 ddlDeptNum.SelectedValue = rbill.Department
                 txtTransNum.Text = rbill.TransNo
+                ddlTransClass.SelectedValue = rbill.TransClass
+                ddlTransID.SelectedValue = rbill.TransId
                 txtTransAmt.Text = Math.Round(.TransAmount, 2)
                 txtServiceHrs.Text = .ServiceHrs
                 txtServiceComp.Text = .ServiceCoy
@@ -275,6 +291,15 @@ Partial Public Class AD140
 
     Private Sub cmbServiceComp_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlServiceComp.SelectedIndexChanged
         DoProc_Company_Change()
+    End Sub
+
+    Protected Sub ddlTransClass_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlTransClass.SelectedIndexChanged
+        SetComboBinding(ddlTransID, acRepo.GetAdminOtherCodes("011", ddlTransClass.SelectedValue), "ItemDesc", "ItemCode")
+
+    End Sub
+
+    Protected Sub DoProc_Company_Search(ByVal sender As Object, ByVal e As EventArgs) Handles cmdCompany_Search.Click
+
     End Sub
 
 End Class

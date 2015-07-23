@@ -21,6 +21,7 @@ Partial Public Class AD160
 
 
 
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'SessionProvider.RebuildSchema()
         txtTransNum.Attributes.Add("disabled", "disabled")
@@ -40,6 +41,10 @@ Partial Public Class AD160
             SetComboBinding(ddlServiceComp, acRepo.GetAdminCodes("002"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlBraNum, acRepo.GetAdminCodes("009"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlDeptNum, acRepo.GetAdminCodes("008"), "ItemDesc", "ItemCode")
+
+            SetComboBinding(ddlTransClass, acRepo.GetAdminCodes("010"), "ItemDesc", "ItemCode")
+            SetComboBinding(ddlTransID, acRepo.GetAdminCodes("011"), "ItemDesc", "ItemCode")
+
 
             If strKey IsNot Nothing Then
                 FillValues()
@@ -97,6 +102,8 @@ Partial Public Class AD160
             'get a new invoice number for the trans
             txtTransNum.Text = obRepo.GetNextSerialNumber("L01", "001", "01", Date.Now.Year.ToString(), "", "01", "01")
             'lblError.Visible = False
+            obill.TransClass = ddlTransClass.SelectedValue.ToString()
+            obill.TransId = ddlTransID.SelectedValue.ToString()
             obill.BranchCode = ddlBraNum.SelectedValue.ToString()
             obill.Department = ddlDeptNum.SelectedValue.ToString()
             obill.TransDescription = txtTransDescr.Text
@@ -119,6 +126,8 @@ Partial Public Class AD160
             obRepo = CType(Session("obRepo"), OutsourceBillRepository)
             obill = CType(Session("obill"), OutsourceBill)
 
+            obill.TransClass = ddlTransClass.SelectedValue.ToString()
+            obill.TransId = ddlTransID.SelectedValue.ToString()
             obill.BranchCode = ddlBraNum.SelectedValue.ToString()
             obill.Department = ddlDeptNum.SelectedValue.ToString()
             obill.TransDescription = txtTransDescr.Text
@@ -155,6 +164,8 @@ Partial Public Class AD160
         txtNoOfStaff.Text = String.Empty
         cmbTransType.SelectedIndex = 0
         txtTransDescr.Text = String.Empty
+        ddlTransClass.SelectedIndex = 0
+        ddlTransID.SelectedIndex = 0
 
     End Sub
     Private Sub SetComboBinding(ByVal toBind As ListControl, ByVal dataSource As Object, ByVal displayMember As String, ByVal valueMember As String)
@@ -162,6 +173,7 @@ Partial Public Class AD160
         toBind.DataValueField = valueMember
         toBind.DataSource = dataSource
         toBind.DataBind()
+        toBind.Items.Insert(0, New ListItem("Select", "NA"))
     End Sub
 
     Private Sub FillValues()
@@ -179,6 +191,8 @@ Partial Public Class AD160
                 ddlBraNum.SelectedValue = obill.BranchCode
                 ddlDeptNum.SelectedValue = obill.Department
                 txtTransNum.Text = obill.TransNo
+                ddlTransClass.SelectedValue = obill.TransClass
+                ddlTransID.SelectedValue = obill.TransId
                 txtTransAmt.Text = Math.Round(.TransAmount, 2)
                 txtNoOfStaff.Text = Math.Round(.NoOfStaff, 2)
                 ddlServiceComp.SelectedValue = .SupplyCompany
@@ -280,5 +294,10 @@ Partial Public Class AD160
 
     Private Sub cmbServiceComp_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlServiceComp.SelectedIndexChanged
         DoProc_Company_Change()
+    End Sub
+
+    Protected Sub ddlTransClass_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlTransClass.SelectedIndexChanged
+        SetComboBinding(ddlTransID, acRepo.GetAdminOtherCodes("011", ddlTransClass.SelectedValue), "ItemDesc", "ItemCode")
+
     End Sub
 End Class

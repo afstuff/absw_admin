@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Services/Repairs/Maintenance</title>
     <link rel="stylesheet" type="text/css" href="StyleAdmin.css" />
         <script src="jquery-1.11.0.js" type="text/javascript"></script>
@@ -153,6 +153,12 @@ End Sub
                 });
 
                 LoadVehicleOwnersFromClientSide();
+
+                //$('#branch-line').hide();
+                $('#dept-line').hide();
+                $('#transid-line').hide();
+                $("#service_coy_line").hide();
+
             });     //End of JQuery Document ready 
 </script>
 
@@ -206,24 +212,38 @@ End Sub
                         <td colspan="2" valign="top"></td>
                     </tr>
                     <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label3" Text="Trans Class:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransClass" Width="300" runat="server" AutoPostBack="True"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtClassID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtClassName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label4" Text="Trans ID:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransID" Width="300" runat="server"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtTransID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtTransName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>                    
+                    <tr>
                         <td align="right" valign="top"><asp:Label ID="Label1" Text="Trans No:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtTransNum" MaxLength="15" runat="server"></asp:TextBox></td>
                     </tr>
 
-                    <tr>
+                    <tr id="transid-line">
                         <td align="right" valign="top"><asp:Label ID="lblTransNum" Text="Transaction Type:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="ddlTransType" AutoPostBack="false" Width="300" runat="server">
                         </asp:DropDownList>
                             &nbsp;<asp:TextBox ID="txtTransType" Enabled="false" Width="60" MaxLength="4" runat="server" Visible=false></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="branch-line">
                         <td align="right" valign="top"><asp:Label ID="lblBraNum" Text="Branch:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="ddlBraNum" AutoPostBack="false" Width="300" runat="server"></asp:DropDownList>                       
                             &nbsp;<asp:TextBox ID="txtBraNum" Enabled="false" Width="60" MaxLength="4" runat="server" Visible=false></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="dept-line">
                         <td align="right" valign="top"><asp:Label ID="lblDeptNum" Text="Department:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="ddlDeptNum" Width="300" runat="server"></asp:DropDownList>                       
                             &nbsp;<asp:TextBox ID="txtDeptNum" Visible="false" Enabled="false" Width="60" MaxLength="5" runat="server"></asp:TextBox>
@@ -243,15 +263,47 @@ End Sub
                         <td align="right" valign="top"><asp:Label ID="lblTransDescr" Text="Description:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtTransDescr" MaxLength="90" runat="server" Width="400px"></asp:TextBox>&nbsp;</td>
                     </tr>
-                    <tr>
+                    <tr id="service_coy_line">
                         <td align="right" valign="top"><asp:Label ID="lblServiceComp" Text="Service Company:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="bottom"><asp:TextBox ID="txtServiceComp"  Width="150"  runat="server" MaxLength=15 ></asp:TextBox>
                                            &nbsp;Find:<asp:TextBox ID="txtServiceComp_Search" Width="120px" runat="server"></asp:TextBox>
     		        &nbsp;<asp:Button ID="cmdCompany_Search" Text="Search" runat="server" OnClick="DoProc_Company_Search" />
                     &nbsp;<asp:DropDownList id="ddlServiceComp" AutoPostBack="true" runat="server" Width="220px" OnTextChanged="DoProc_Company_Change"></asp:DropDownList>
 
-                        
-                                <asp:GridView id="grdData" Font-Size="Small" BackColor="White" bordercolor="Silver" borderstyle="Solid" runat="server"
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label2" Text="Service HRS:" runat="server" Visible="false"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:TextBox ID="txtServiceHrs" MaxLength="15" runat="server" Visible="false"></asp:TextBox></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" valign="top">
+                                &nbsp;</td>
+                    </tr>
+
+                </table>
+            </td>
+                
+        </tr>
+
+                <tr>
+                    <td valign="top">
+                    <table align="center" width="95%" style="border-style:groove;">
+                        <tr>
+                            <td align="left" colspan="4" valign="top" class="tbl_caption">Transaction Details</td>
+                        </tr>
+			           <tr>
+                            <td align="left" colspan="4" valign="top" style=" background-color: #ccccee; height: 26px">
+					            &nbsp;&nbsp;<asp:Button ID="cmdDelItem_ASP" Enabled="true" Font-Bold="true" Text="Delete Item" runat="server" />
+					            &nbsp;&nbsp;<asp:Button ID="cmdDelItem" Enabled="false" Font-Bold="true" Visible="false" Text="Delete Item" runat="server" />
+				                </td>
+			            </tr>
+
+                        <tr>
+                            <td colspan="4" valign="top" style="width:auto;">
+                            <asp:GridView id="grdData" Font-Size="Small" BackColor="White" bordercolor="Silver" borderstyle="Solid" runat="server"
                                     horizontalalign="Left" DataSourceID="ods"
                                     AutoGenerateColumns="false" AllowPaging="true" PageSize="10"
                                     selectedindex="0" PagerSettings-Position="TopAndBottom" PagerSettings-Mode="NextPreviousFirstLast"
@@ -296,41 +348,6 @@ End Sub
                                     </Columns>
   
                                 </asp:GridView>
-
-                        
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td align="right" valign="top"><asp:Label ID="Label2" Text="Service HRS:" runat="server"></asp:Label>&nbsp;</td>
-                        <td valign="top"><asp:TextBox ID="txtServiceHrs" MaxLength="15" runat="server"></asp:TextBox></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2" valign="top">
-                                &nbsp;</td>
-                    </tr>
-
-                </table>
-            </td>
-                
-        </tr>
-
-                <tr>
-                    <td valign="top">
-                    <table align="center" width="95%" style="border-style:groove;">
-                        <tr>
-                            <td align="left" colspan="4" valign="top" class="tbl_caption">Transaction Details</td>
-                        </tr>
-			           <tr>
-                            <td align="left" colspan="4" valign="top" style=" background-color: #ccccee; height: 26px">
-					            &nbsp;&nbsp;<asp:Button ID="cmdDelItem_ASP" Enabled="true" Font-Bold="true" Text="Delete Item" runat="server" />
-					            &nbsp;&nbsp;<asp:Button ID="cmdDelItem" Enabled="false" Font-Bold="true" Visible="false" Text="Delete Item" runat="server" />
-				                </td>
-			            </tr>
-
-                        <tr>
-                            <td colspan="4" valign="top" style="width:auto;">
                                 &nbsp;</td>
                         </tr>
                     </table>

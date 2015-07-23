@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Outsourcing Records</title>
     <link rel="stylesheet" type="text/css" href="StyleAdmin.css" />
     <script src="jquery-1.11.0.js" type="text/javascript"></script>
@@ -21,6 +21,12 @@
 
             //    return false;
         });
+        $('#branch-line').hide();
+        $('#dept-line').hide();
+        $('#service_coy_line').hide();
+        $('#trans-type-line').hide();
+        
+        
 
     });     //End of JQuery Document ready 
 </script>
@@ -74,10 +80,24 @@
                         <td colspan="2" valign="top"></td>
                     </tr>
                     <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label2" Text="Trans Class:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransClass" Width="300" runat="server" AutoPostBack="True"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtClassID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtClassName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label1" Text="Trans ID:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransID" Width="300" runat="server"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtTransID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtTransName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
                         <td align="right" valign="top"><asp:Label ID="lblTransNum" Text="Transaction No:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtTransNum" MaxLength="15" AutoPostBack="false" runat="server"></asp:TextBox></td>
                     </tr>
-                                        <tr>
+                                        <tr id="trans-type-line">
                         <td align="right" valign="top"><asp:Label ID="lbltranstype" Text="Transaction Type:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="cmbTransType"  Width="150" runat="server">
                             <asp:ListItem Text="Driver" Value="D"></asp:ListItem>
@@ -86,13 +106,13 @@
                         </asp:DropDownList>                       
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="branch-line">
                         <td align="right" valign="top"><asp:Label ID="lblBraNum" Text="Branch:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="ddlBraNum" AutoPostBack="false" Width="300" runat="server"></asp:DropDownList>                       
                             &nbsp;<asp:TextBox ID="txtBraNum" Enabled="false" Visible=false Width="60" MaxLength="4" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                                        <tr>
+                    <tr id="dept-line">
                         <td align="right" valign="top"><asp:Label ID="lblDeptNum" Text="Department:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:DropDownList ID="ddlDeptNum" Width="300" runat="server"></asp:DropDownList>                       
                             &nbsp;<asp:TextBox ID="txtDeptNum" Visible="false" Enabled="false" Width="60" MaxLength="5" runat="server"></asp:TextBox>
@@ -117,7 +137,7 @@
                         <td align="right" valign="top"><asp:Label ID="lblTransDescr" Text="Description:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtTransDescr" runat="server" Width="300px"></asp:TextBox>&nbsp;</td>
                     </tr>
-                    <tr>
+                    <tr id="service_coy_line">
                         <td align="right" valign="top"><asp:Label ID="lblServiceComp" Text="Service Company:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="bottom"><asp:TextBox ID="txtServiceComp"  Width="150"  runat="server" MaxLength=15 ></asp:TextBox>
                                            &nbsp;Find:<asp:TextBox ID="txtServiceComp_Search" Width="120px" runat="server"></asp:TextBox>

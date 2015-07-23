@@ -400,6 +400,13 @@
     <Content Include="AD132.aspx" />
     <Content Include="AD142.aspx" />
     <Content Include="AD180.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Common.Logging.dll" />
+    <Content Include="bin\Iesi.Collections.dll" />
+    <Content Include="bin\Iesi.Collections.xml" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\log4net.xml" />
+    <Content Include="bin\NHibernate.xml" />
     <Content Include="calendar.css" />
     <Content Include="calendar_eu.js" />
     <Content Include="img\image files.zip" />
