@@ -210,6 +210,21 @@ End Sub
                         <td align="left" colspan="2" valign="top" class="tbl_caption">Car Maintenance Data Entry</td>
                     </tr>
                     <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label3" Text="Trans Class:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransClass" Width="300" runat="server" AutoPostBack="True"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtClassID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtClassName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label4" Text="Trans ID:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransID" Width="300" runat="server"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtTransID" Visible="false" Enabled="false" Width="60" MaxLength="4" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtTransName" Visible="false" Enabled="false" Width="60" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>                    
+                    
+                    <tr>
                         <td align="right" valign="top"><asp:Label ID="lblTransNum" Text="Vehicles:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top">
                         <asp:DropDownList ID="cmbVehicleOwners" Width="300" runat="server"></asp:DropDownList>

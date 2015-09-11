@@ -35,18 +35,8 @@
                             <td align="right" valign="top" class="td_return_menu">&nbsp;<a class="a_return_menu" href="Blankpg.aspx">Close Page</a> &nbsp;</td>
                         </tr>
                         
-                        <tr>
-                            <td align="left" valign="top" class="td_sub_menu2">&nbsp;&nbsp;
-                                &nbsp;<img alt='Menu Image' src='Images/ballred.gif' class='MY_IMG_LINK' />
-                                &nbsp;<a class="a_sub_menu2" href="AD_MENU.aspx?mopt=diesel" target="fra_content_01">AD150 - Diesel Record</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left" valign="top" class="td_sub_menu2">&nbsp;&nbsp;
-                                &nbsp;<img alt='Menu Image' src='Images/ballred.gif' class='MY_IMG_LINK' />
-                                &nbsp;<a class="a_sub_menu2" href="AD_MENU.aspx?mopt=outsource" target="fra_content_01">AD160 - Outsourcing Records</a>
-                            </td>
-                        </tr>
+                        
+                       
                         <tr>
                             <td align="left" valign="top" class="td_sub_menu2">&nbsp;&nbsp;
                                 &nbsp;<img alt='Menu Image' src='Images/ballred.gif' class='MY_IMG_LINK' />

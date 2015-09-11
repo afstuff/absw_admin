@@ -71,9 +71,10 @@
             <div class="div_menu_01">
                     &nbsp;<a href="HOME_PG.aspx" target="fra_content_01X">HOME</a>
                     &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_10" PostBackUrl="AD_MENU.aspx?mopt=tel_bill" Text="Telephone Bill" runat="server"></asp:LinkButton>
-                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_20" PostBackUrl="AD_MENU.aspx?mopt=nepa_bill" Text="Electricity Bill" runat="server"></asp:LinkButton>
-                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_30" PostBackUrl="AD_MENU.aspx?mopt=veh" Text="Vehicle Maintenance" runat="server"></asp:LinkButton>
-                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_40" PostBackUrl="AD_MENU.aspx?mopt=repairs" Text="Repairs and Services" runat="server"></asp:LinkButton>
+                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_20" PostBackUrl="AD_MENU.aspx?mopt=nepa_bill" Text="Services Bill" runat="server"></asp:LinkButton>
+                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_30" PostBackUrl="AD_MENU.aspx?mopt=veh" Text="Motor Vehicle (R & M)" runat="server"></asp:LinkButton>
+                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_40" PostBackUrl="AD_MENU.aspx?mopt=repairs" Text="Procurement" runat="server"></asp:LinkButton>
+                    &nbsp;&nbsp;<asp:LinkButton ID="LNK_AD_50" PostBackUrl="AD_MENU.aspx?mopt=branch" Text="Branch Expenses" runat="server"></asp:LinkButton>
                     &nbsp;&nbsp;<a href="ADOTH.aspx" target="fra_content_01X">Other Records</a>
                     &nbsp;&nbsp;<a href="javascript:JSDO_LOG_OUT()">Log Off</a>
 

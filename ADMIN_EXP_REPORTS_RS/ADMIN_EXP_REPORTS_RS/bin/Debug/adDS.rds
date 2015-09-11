@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="adDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=ABS-SERVER;Initial Catalog=ABS_ADMIN</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>da3ec260-93a6-4ae1-a1d0-adef7885b83f</DataSourceID>
+</RptDataSource>

@@ -54,6 +54,54 @@ lblMessage control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:ABSW_ADMIN.AD112.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD112.ddlTransClass">
+	<summary>
+ddlTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD112.txtTransClass">
+	<summary>
+txtTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD112.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD112.ddlTransID">
+	<summary>
+ddlTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD112.txtTransID">
+	<summary>
+txtTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:ABSW_ADMIN.AD112.Label1">
 	<summary>
 Label1 control.
@@ -81,54 +129,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.AD112.txtEndDate">
 	<summary>
 txtEndDate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.lblBraNum">
-	<summary>
-lblBraNum control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.ddlBraNumStart">
-	<summary>
-ddlBraNumStart control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.txtBraNumStart">
-	<summary>
-txtBraNumStart control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.lblDeptNum">
-	<summary>
-lblDeptNum control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.ddlBraNumEnd">
-	<summary>
-ddlBraNumEnd control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:ABSW_ADMIN.AD112.txtBraNumEnd">
-	<summary>
-txtBraNumEnd control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -937,6 +937,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN._Default.LNK_AD_40">
 	<summary>
 LNK_AD_40 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN._Default.LNK_AD_50">
+	<summary>
+LNK_AD_50 control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -1793,6 +1801,70 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.AD130.lblMessage">
 	<summary>
 lblMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.ddlTransClass">
+	<summary>
+ddlTransClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.txtClassID">
+	<summary>
+txtClassID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.txtClassName">
+	<summary>
+txtClassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.ddlTransID">
+	<summary>
+ddlTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.txtTransID">
+	<summary>
+txtTransID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.AD130.txtTransName">
+	<summary>
+txtTransName control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -2945,6 +3017,46 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:ABSW_ADMIN.ADLOGIN.CancelBtn">
 	<summary>
 CancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.PrintView.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.PrintView.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.PrintView.lblDesc2">
+	<summary>
+lblDesc2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.PrintView.butView">
+	<summary>
+butView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:ABSW_ADMIN.PrintView.butClsoe">
+	<summary>
+butClsoe control.
 </summary>
 	<remarks>
 Auto-generated field.

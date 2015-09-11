@@ -46,6 +46,9 @@ Partial Public Class AD130
             SetComboBinding(ddlBraNum, acRepo.GetAdminCodes("009"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlDeptNum, acRepo.GetAdminCodes("008"), "ItemDesc", "ItemCode")
 
+            SetComboBinding(ddlTransClass, acRepo.GetAdminCodes("010"), "ItemDesc", "ItemCode")
+            SetComboBinding(ddlTransID, acRepo.GetAdminCodes("011"), "ItemDesc", "ItemCode")
+
             If strKey IsNot Nothing Then
                 FillValues()
             Else
@@ -102,6 +105,9 @@ Partial Public Class AD130
             vmbill = New VehicleMaintenance
 
             'lblError.Visible = False
+            vmbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            vmbill.TransId = ddlTransID.SelectedValue.ToString()
+
             vmbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             vmbill.Department = ddlDeptNum.SelectedValue.ToString()
             vmbill.UserName = txtUserName.Text
@@ -123,6 +129,8 @@ Partial Public Class AD130
             vmRepo = CType(Session("vmRepo"), VehicleMaintRepository)
             vmbill = CType(Session("vmbill"), VehicleMaintenance)
 
+            vmbill.TransClass = ddlTransClass.SelectedValue.ToString()
+            vmbill.TransId = ddlTransID.SelectedValue.ToString()
             vmbill.BranchCode = ddlBraNum.SelectedValue.ToString()
             vmbill.Department = ddlDeptNum.SelectedValue.ToString()
             vmbill.UserName = txtUserName.Text
@@ -164,12 +172,16 @@ Partial Public Class AD130
         txtVehicleType.Text = String.Empty
         txtServiceComp.Text = String.Empty
         txtMaintType.Text = String.Empty
+        ddlTransClass.SelectedIndex = 0
+        ddlTransID.SelectedIndex = 0
+
     End Sub
     Private Sub SetComboBinding(ByVal toBind As ListControl, ByVal dataSource As Object, ByVal displayMember As String, ByVal valueMember As String)
         toBind.DataTextField = displayMember
         toBind.DataValueField = valueMember
         toBind.DataSource = dataSource
         toBind.DataBind()
+        toBind.Items.Insert(0, New ListItem("Select", "NA"))
     End Sub
 
     Private Sub FillValues()
@@ -181,6 +193,8 @@ Partial Public Class AD130
 
         If vmbill IsNot Nothing Then
             With vmbill
+                ddlTransClass.SelectedValue = vmbill.TransClass
+                ddlTransID.SelectedValue = vmbill.TransId
 
                 txtUserName.Text = vmbill.UserName
                 txtTransNum.Text = vmbill.VehicleNo
@@ -319,7 +333,10 @@ Public Shared Function GetVehicleAndOwners() As IList
         End If
 
     End Sub
+    Protected Sub ddlTransClass_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlTransClass.SelectedIndexChanged
+        SetComboBinding(ddlTransID, acRepo.GetAdminOtherCodes("011", ddlTransClass.SelectedValue), "ItemDesc", "ItemCode")
 
+    End Sub
     Protected Sub grdData_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles grdData.SelectedIndexChanged
 
     End Sub

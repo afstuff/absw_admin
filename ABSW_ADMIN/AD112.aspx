@@ -97,9 +97,26 @@
                 <table align="left" width="100%">
                     <tr>
                         <td align="left" colspan="2" valign="top" class="tbl_caption">
-                            Telephone Bills Print
+                            Bills Details Print
                         </td>
                     </tr>
+                    <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label2" Text="Trans Class:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransClass" AutoPostBack="true" Width="150" runat="server"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtTransClass" Enabled="true" Width="100" runat="server" 
+                                Visible="False"></asp:TextBox>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td align="right" valign="top"><asp:Label ID="Label3" Text="Trans ID:" runat="server"></asp:Label>&nbsp;</td>
+                        <td valign="top"><asp:DropDownList ID="ddlTransID" Width="150" runat="server" 
+                                AutoPostBack="True"></asp:DropDownList>                       
+                            &nbsp;<asp:TextBox ID="txtTransID"  Enabled="true" Width="100" runat="server" 
+                                Visible="False"></asp:TextBox>
+                        </td>
+                    </tr>
+                    
+                   
                     <tr>
                         <td align="right" valign="top"><asp:Label ID="Label1" Text="Start Print Date:" runat="server"></asp:Label>&nbsp;</td>
                         <td valign="top"><asp:TextBox ID="txtStartDate" MaxLength="10" runat="server"></asp:TextBox>
@@ -112,18 +129,7 @@
                         <script language="JavaScript" type="text/javascript">
                             new tcal({ 'formname': 'AD112', 'controlname': 'txtTransDate' });</script>&nbsp;&nbsp;dd/mm/yyyy</td>                       
                     </tr>
-                    <tr>
-                        <td align="right" valign="top"><asp:Label ID="lblBraNum" Text="Start Branch:" runat="server"></asp:Label>&nbsp;</td>
-                        <td valign="top"><asp:DropDownList ID="ddlBraNumStart" AutoPostBack="true" Width="150" runat="server"></asp:DropDownList>                       
-                            &nbsp;<asp:TextBox ID="txtBraNumStart" Enabled="true" Width="100" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td align="right" valign="top"><asp:Label ID="lblDeptNum" Text="End Branch:" runat="server"></asp:Label>&nbsp;</td>
-                        <td valign="top"><asp:DropDownList ID="ddlBraNumEnd" Width="150" runat="server"></asp:DropDownList>                       
-                            &nbsp;<asp:TextBox ID="txtBraNumEnd"  Enabled="true" Width="100" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+                    
                     <tr>
                       <td colspan="5" valign="top">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
